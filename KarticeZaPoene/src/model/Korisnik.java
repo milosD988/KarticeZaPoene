@@ -17,6 +17,7 @@ public class Korisnik {
 		this.poeniPre = poeniPre;
 		this.kartice = kartice;
 	}
+	
 
 	public int getPoeniPre() {
 		return poeniPre;

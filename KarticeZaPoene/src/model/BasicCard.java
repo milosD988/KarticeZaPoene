@@ -5,6 +5,7 @@ public abstract class BasicCard {
 	private int id;
 	private String pan;
 	
+	
 	public BasicCard() {
 		
 	}

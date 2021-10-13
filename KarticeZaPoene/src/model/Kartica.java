@@ -7,6 +7,8 @@ public class Kartica extends BasicCard implements IPoeni{
 	private double sipanoLitara;
 	private int tipKartice;
 	
+	
+	
 	public Kartica() {
 		
 	}
