@@ -32,8 +32,24 @@ public class Statistika {
 		return extraPoeni;
 	}
 	
-	public void poeniKartice(String pan, List<Kartica > kartice) {
+	//ispisuje koliko je poena dobila kartica nakon sto se unese pan
+	public static void poeniKartice(String pan, List<Kartica > kartice) {
 		
+		Kartica kartica = null;
+		
+		for(Kartica k : kartice) {
+			if(k.getPan().equals(pan)) {
+				kartica = k;
+			}
+		}
+		
+		if(kartica != null) {
+			kartica.ispisiKarticu();
+			System.out.println("Ima " + kartica.izracunajBrojPoena(kartica) + " poena!");
+		}
+		else {
+			System.out.println("Ne postoji kartica sa unetim PANom!");
+		}
 		
 	}
 

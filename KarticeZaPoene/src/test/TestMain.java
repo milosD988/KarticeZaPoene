@@ -2,6 +2,7 @@ package test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import model.Kartica;
 import model.Korisnik;
@@ -10,6 +11,8 @@ import model.Statistika;
 public class TestMain {
 
 	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
 
 		Kartica normalKartica = new Kartica();
 			normalKartica.setId(1);
@@ -39,6 +42,12 @@ public class TestMain {
 		
 		int extraPoeni = Statistika.extraPoeni(korisnik);
 		System.out.println("Extra poeni: " + extraPoeni);
+		
+		System.out.println("Unesite PAN kartice: ");
+		String pan = scanner.nextLine();
+		Statistika.poeniKartice(pan, kartice);
+		
+		scanner.close();
 			
 	}
 
